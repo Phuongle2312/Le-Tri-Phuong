@@ -1,0 +1,10 @@
+#btnCenter{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(198, 100, 170)
+}
+#btnRegister{
+    height:auto;
+    width: 400px;
+    background-color: rgb(242, 244, 235) ;
+    border-radius: 8px;
+}

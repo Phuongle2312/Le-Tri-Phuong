@@ -1,11 +1,57 @@
 body{
     font-family: 'Courier New', Courier, monospace;
-    background-color: rgb(27, 154, 154);
+    background-color: #e9ebed;
+    color: rgb(171, 156, 156);
+    margin: 4px;
 }
 
+
 div{
-    height: 300px;
+    height: 360px;
     width: 300px;
-    background-color: rgb(224, 224, 192);
+    background-color: #506Ed1;
     border-radius: 8px;
 }
+div:hover{
+    background-color: rgb(100, 82, 180);
+}
+#btnRegister{   
+    height: auto;
+    
+}
+#btnFollow{
+    height: auto;
+}
+
+.myButtom{
+    height: auto;
+    width: 80px;
+    color:rgb(208, 196, 196);
+    background-color: black;
+    border-radius: 4px;
+    border: none;
+    padding: 4px;
+    margin-left: 4px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.myButtom:hover{
+    background-color: rgb(19, 19, 20);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+input{
+    margin: 8px;
+    height: 24px;
+    width: 200px;
+    border-radius: 8px;
+    border-color: rgb(217, 196, 196);
+    border: 2px;
+    font-size: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: normal;
+}
+label{
+    font-weight: 600;
+}
+
