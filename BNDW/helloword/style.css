@@ -1,46 +1,53 @@
-body{
+body {
     font-family: 'Courier New', Courier, monospace;
     background-color: #e9ebed;
     color: rgb(171, 156, 156);
-    margin: 4px;
+    margin: 0px;
 }
 
 
-div{
+div {
     height: 360px;
-    width: 300px;
+    width: 350px;
     background-color: #506Ed1;
     border-radius: 8px;
+    margin: 8px;
+    padding: 4px;
 }
-div:hover{
+
+div:hover {
     background-color: rgb(100, 82, 180);
 }
-#btnRegister{   
+
+#btnRegister {
     height: auto;
-    
+
 }
-#btnFollow{
+
+#btnFollow {
     height: auto;
 }
 
-.myButtom{
+.myButtom {
     height: auto;
     width: 80px;
-    color:rgb(208, 196, 196);
+    color: rgb(208, 196, 196);
     background-color: black;
-    border-radius: 4px;
+    border-radius: 8px;
     border: none;
     padding: 4px;
-    margin-left: 4px;
+    margin: 8px;
     font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
 }
-.myButtom:hover{
+
+.myButtom:hover {
     background-color: rgb(19, 19, 20);
     color: rgb(255, 255, 255);
     cursor: pointer;
 }
-input{
+
+input {
     margin: 8px;
     height: 24px;
     width: 200px;
@@ -48,10 +55,10 @@ input{
     border-color: rgb(217, 196, 196);
     border: 2px;
     font-size: 10px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: normal;
 }
-label{
+
+label {
     font-weight: 600;
 }
-
