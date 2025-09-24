@@ -1,0 +1,13 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.banner {
+  height: 90vh;
+  background: url("images/banner.jpg") no-repeat center center/cover;
+}
+
+.card img {
+  height: 250px;
+  object-fit: cover;
+}
