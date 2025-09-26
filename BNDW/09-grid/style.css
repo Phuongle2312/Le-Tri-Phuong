@@ -1,0 +1,18 @@
+.col button {
+  height: auto;
+  width: 200px;
+  color: rgb(208, 196, 196);
+  background-color: rgba(3, 28, 48, 0.478);
+  border-radius: 8px;
+  border: none;
+  padding: 4px;
+  margin: 8px;
+  font-weight: 600;
+  font-family: "arial", sans-serif;
+}
+
+.col button:hover {
+  background-color: rgb(26, 38, 129);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
