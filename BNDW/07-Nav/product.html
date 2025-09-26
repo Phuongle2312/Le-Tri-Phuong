@@ -1,143 +1,259 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chi tiết sản phẩm - Nike Mercurial</title>
-    <!-- Bootstrap -->
-    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Products</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
 </head>
-
-<body>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">⚽ Football Store</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+<header>
+    <div>
+        <nav class="navbar navbar-expand-sm bg-light m-2">
+            <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" class="navbar-toggler">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse m-2" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="#">Sản phẩm</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Giỏ hàng</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="./product.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./service.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
+                    <li class="nav-item">
+                        <div class="ms-2 me-auto position-relative">
+                            <a class="nav-link" href="./notification.html">Notifications</a>
+                            <span class="badge bg-danger rounded-bottom-circle position-absolute top-0 end-0">5</span>
+                        </div>
+
+                    </li>
                 </ul>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <!-- Product Detail -->
-    <div class="container my-5">
-        <div class="row">
-
-            <!-- Product Image -->
-            <div class="col-md-6">
-                <img src="./image/Nike/ZM+VAPOR+16+ELITE+FG+VJR.avif" class="img-fluid border rounded mb-3"
-                    id="mainImage" alt="Nike Mercurial">
-                <div class="d-flex gap-2">
-                    <img src="./image/Nike/ZM+VAPOR+16+ELITE+FG+VJR.avif" class="img-thumbnail small-img" alt="Nike"
-                        style="width:80px;cursor:pointer;">
-                    <img src="./image/Nike/ZM+SUPERFLY+10+ELITE+FG.avif" class="img-thumbnail small-img" alt="Nike"
-                        style="width:80px;cursor:pointer;">
-                    <img src="./image/Nike/ZM+VAPOR+16+ELITE+AM+95+SE+FG.avif" class="img-thumbnail small-img"
-                        alt="Nike" style="width:80px;cursor:pointer;">
-                </div>
-            </div>
-
-            <!-- Product Info -->
-            <div class="col-md-6">
-                <h2>Nike Mercurial Vapor 15</h2>
-                <p class="text-muted">Giày đá bóng chính hãng Nike</p>
-                <h4 class="text-danger">3.200.000đ</h4>
-                <p>Được thiết kế cho tốc độ và sự linh hoạt, Nike Mercurial là sự lựa chọn hàng đầu của các cầu thủ
-                    chuyên nghiệp.</p>
-
-                <!-- Size Options -->
-                <div class="mb-3">
-                    <label for="size" class="form-label fw-bold">Chọn size:</label>
-                    <select class="form-select w-50" id="size">
-                        <option>39</option>
-                        <option>40</option>
-                        <option>41</option>
-                        <option>42</option>
-                        <option>43</option>
-                    </select>
-                </div>
-
-                <!-- Quantity -->
-                <div class="mb-3">
-                    <label for="qty" class="form-label fw-bold">Số lượng:</label>
-                    <input type="number" id="qty" class="form-control w-25" min="1" value="1">
-                </div>
-
-                <!-- Buttons -->
-                <button class="btn btn-warning me-2">🛒 Thêm vào giỏ</button>
-                <button class="btn btn-danger">Mua ngay</button>
-            </div>
-
-        </div>
     </div>
 
-    <!-- Related Products -->
-    <div class="container my-5">
-        <h3 class="mb-4">Sản phẩm liên quan</h3>
-        <div class="row g-4">
-            <div class="col-md-3">
-                <div class="card h-100 shadow">
-                    <img src="./image/Adidas/Giay_DJa_Bong_Turf_Predator_Accuracy.4_trang_GY9995_22_model.avif"
-                        class="card-img-top" alt="Adidas Predator">
-                    <div class="card-body text-center">
-                        <h6 class="card-title">Adidas Predator</h6>
-                        <p class="text-danger fw-bold">2.800.000đ</p>
-                        <a href="./index.html" class="btn btn-outline-dark btn-sm">Xem chi tiết</a>
+</header>
+
+<body>
+    <div class="container">
+        <div class="row mb-lg-3" style="height: auto;width: auto;">
+            <div class="col me-1 mb-1">
+                <div class="card m-2" style="height: 100%; width: 240px;">
+                    <div class="card-header text-center">
+                        <b>IPhone 17 pro max</b>
+                    </div>
+                    <div class="card-body" style="height: auto;">
+                        <img class="img-fluid w-100 rounded-2 shadow" src="./image/iphone-17-pro-256-gb.png"
+                            alt="Iphone 17 pro max">
+                        <div>
+
+                            <ul claass="list-unstyled mt-2">
+                                <li>
+                                    <b>Giá:</b> 30.000.000 VND
+                                </li>
+                                <li>
+                                    <b>Ưu đãi:</b> Giảm 5% cho khách hàng thân thiết
+                                </li>
+                                <li>
+                                    <b>Trả góp:</b> Trả góp 0% lãi suất trong 6 tháng
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-center">
+                            <button class="btn w-40 mx-1"
+                                style="background-color: rgb(24, 133, 78); color: white;">Buy</button>
+                            <button class="btn w-60 mx-1"
+                                style="background-color :#e93333;color: rgb(247, 243, 244) ;">Add to
+                                card</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col me-1 mb-1">
+                <div class="card m-2" style="height: 100%; width: 240px;">
+                    <div class="card-header text-center">
+                        <b>IPhone 17</b>
+                    </div>
+                    <div class="card-body" style="height: auto;">
+                        <img class="img-fluid w-100 rounded-2 shadow" src="./image/iphone_17_256gb-3_2.jpg"
+                            alt="Iphone 17">
+                        <div>
+
+                            <ul claass="list-unstyled mt-2">
+                                <li>
+                                    <b>Giá:</b> 25.000.000 VND
+                                </li>
+                                <li>
+                                    <b>Ưu đãi:</b> Giảm 5% cho khách hàng thân thiết
+                                </li>
+                                <li>
+                                    <b>Trả góp:</b> Trả góp 0% lãi suất trong 6 tháng
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-center">
+                            <button class="btn w-40 mx-1"
+                                style="background-color: rgb(24, 133, 78); color: white;">Buy</button>
+                            <button class="btn w-60 mx-1"
+                                style="background-color :#e93333;color: rgb(247, 243, 244) ;">Add to
+                                card</button>
+                        </div>
+
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-3">
-                <div class="card h-100 shadow">
-                    <img src="images/puma1.jpg" class="card-img-top" alt="Puma Future">
-                    <div class="card-body text-center">
-                        <h6 class="card-title">Puma Future</h6>
-                        <p class="text-danger fw-bold">2.500.000đ</p>
-                        <a href="product.html" class="btn btn-outline-dark btn-sm">Xem chi tiết</a>
+            <div class="col me-1 mb-1">
+                <div class="card m-2" style="height: 100%; width: 240px;">
+                    <div class="card-header text-center">
+                        <b>IPhone 17 air</b>
                     </div>
-                </div>
-            </div>
+                    <div class="card-body" style="height: auto;">
+                        <img class="img-fluid w-100 rounded-2 shadow"
+                            src="./image/apple-iphone-17-air-1tb_6450d940.webp" alt="Iphone 17 air">
+                        <div>
 
-            <div class="col-md-3">
-                <div class="card h-100 shadow">
-                    <img src="images/nike4.jpg" class="card-img-top" alt="Nike Phantom">
-                    <div class="card-body text-center">
-                        <h6 class="card-title">Nike Phantom</h6>
-                        <p class="text-danger fw-bold">3.000.000đ</p>
-                        <a href="product.html" class="btn btn-outline-dark btn-sm">Xem chi tiết</a>
+                            <ul claass="list-unstyled mt-2">
+                                <li>
+                                    <b>Giá:</b> 26.000.000 VND
+                                </li>
+                                <li>
+                                    <b>Ưu đãi:</b> Giảm 5% cho khách hàng thân thiết
+                                </li>
+                                <li>
+                                    <b>Trả góp:</b> Trả góp 0% lãi suất trong 6 tháng
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-center">
+                            <button class="btn w-40 mx-1"
+                                style="background-color: rgb(24, 133, 78); color: white;">Buy</button>
+                            <button class="btn w-60 mx-1"
+                                style="background-color :#e93333;color: rgb(247, 243, 244) ;">Add to
+                                card</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="container">
+            <div class="row mb-lg-3" style="height: auto;width: auto;">
+                <div class="col me-1 mb-1">
+                    <div class="card m-2" style="height: 100%; width: 240px;">
+                        <div class="card-header text-center">
+                            <b>Samsung Galaxy Fold 7</b>
+                        </div>
+                        <div class="card-body" style="height: auto;">
+                            <img class="img-fluid w-100 rounded-2 shadow"
+                                src="./image/(600x600)_samsung_galaxy_z_fold7_xanh_bien_didongmy_thumb_600x600_1.jpg"
+                                alt="Samsung Galaxy Fold 7">
+                            <div>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2025 Football Store | Thiết kế bởi Bạn ⚡</p>
-    </footer>
+                                <ul claass="list-unstyled mt-2">
+                                    <li>
+                                        <b>Giá:</b> 40.000.000 VND
+                                    </li>
+                                    <li>
+                                        <b>Ưu đãi:</b> Giảm 5% cho khách hàng thân thiết
+                                    </li>
+                                    <li>
+                                        <b>Trả góp:</b> Trả góp 0% lãi suất trong 6 tháng
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-flex justify-content-center">
+                                <button class="btn w-40 mx-1"
+                                    style="background-color: rgb(24, 133, 78); color: white;">Buy</button>
+                                <button class="btn w-60 mx-1"
+                                    style="background-color :#e93333;color: rgb(247, 243, 244) ;">Add to
+                                    card</button>
+                            </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Chuyển ảnh chính khi bấm thumbnail
-        const mainImage = document.getElementById('mainImage');
-        const smallImgs = document.querySelectorAll('.small-img');
-        smallImgs.forEach(img => {
-            img.addEventListener('click', () => {
-                mainImage.src = img.src;
-            });
-        });
-    </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="col me-1 mb-1">
+                    <div class="card m-2" style="height: 100%; width: 240px;">
+                        <div class="card-header text-center">
+                            <b>Samsung Galaxy Flip 7</b>
+                        </div>
+                        <div class="card-body" style="height: auto;">
+                            <img class="img-fluid w-100 rounded-2 shadow"
+                                src="./image/samsung-galaxy-z-flip7-red-thumb-600x600.jpg" alt="Samsung Galaxy Flip 7">
+                            <div>
+
+                                <ul claass="list-unstyled mt-2">
+                                    <li>
+                                        <b>Giá:</b> 39.000.000 VND
+                                    </li>
+                                    <li>
+                                        <b>Ưu đãi:</b> Giảm 5% cho khách hàng thân thiết
+                                    </li>
+                                    <li>
+                                        <b>Trả góp:</b> Trả góp 0% lãi suất trong 6 tháng
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-flex justify-content-center">
+                                <button class="btn w-40 mx-1"
+                                    style="background-color: rgb(24, 133, 78); color: white;">Buy</button>
+                                <button class="btn w-60 mx-1"
+                                    style="background-color :#e93333;color: rgb(247, 243, 244) ;">Add to
+                                    card</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col me-1 mb-1">
+                    <div class="card m-2" style="height: 100%; width: 240px;">
+                        <div class="card-header text-center">
+                            <b>Samsung Galaxy S25 Ultra</b>
+                        </div>
+                        <div class="card-body" style="height: auto;">
+                            <img class="img-fluid w-100 rounded-2 shadow"
+                                src="./image/samsung-galaxy-s25-ultra-blue-thumbai-600x600.jpg"
+                                alt="Samsung Galaxy S25 Ultra">
+                            <div>
+
+                                <ul claass="list-unstyled mt-2">
+                                    <li>
+                                        <b>Giá:</b> 38.000.000 VND
+                                    </li>
+                                    <li>
+                                        <b>Ưu đãi:</b> Giảm 5% cho khách hàng thân thiết
+                                    </li>
+                                    <li>
+                                        <b>Trả góp:</b> Trả góp 0% lãi suất trong 6 tháng
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-flex justify-content-center">
+                                <button class="btn w-40 mx-1"
+                                    style="background-color: rgb(24, 133, 78); color: white;">Buy</button>
+                                <button class="btn w-60 mx-1"
+                                    style="background-color :#e93333;color: rgb(247, 243, 244) ;">Add to
+                                    card</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
 </body>
 
 </html>
