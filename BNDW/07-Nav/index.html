@@ -7,6 +7,46 @@
     <title>Demo</title>
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .narbar-brand {
+            font-weight: bold;
+            font-size: 22px;
+            color: #007bff !important;
+        }
+
+        .hero {
+            background: url('./image/photo-1511707171634-5f897ff02aa9.jpg') center/cover no-repeat;
+            height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        footer {
+            background: #343a40;
+            color: #ddd;
+            padding: 40px 0 20px;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #ddd;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #00bcd4;
+        }
+    </style>
+
 </head>
 <header>
     <div>
@@ -38,7 +78,59 @@
 </header>
 
 <body>
+    <!-- HERO -->
+    <section class="hero">
+        <div>
+            <h1>Chào mừng đến với PhoneStore</h1>
+            <p>Mua sắm điện thoại chính hãng - Giá tốt nhất thị trường</p>
+            <a href="products.html" class="btn btn-primary btn-lg mt-3">Khám phá ngay</a>
+        </div>
+    </section>
 
+    <!-- FEATURE PRODUCTS -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Sản phẩm nổi bật</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <img src="./image/iphone-17-pro-256-gb.png" class="card-img-top" alt="iPhone">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">iPhone 17 Pro Max</h5>
+                        <p class="card-text text-danger fw-bold">32.990.000₫</p>
+                        <a href="./product.html" class="btn btn-outline-primary">Xem thêm</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <img src="./image/samsung-galaxy-s25-ultra-blue-thumbai-600x600.jpg" class="card-img-top"
+                        alt="Samsung">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Samsung Galaxy S25 Ultra</h5>
+                        <p class="card-text text-danger fw-bold">28.990.000₫</p>
+                        <a href="./product.html" class="btn btn-outline-primary">Xem thêm</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <img src="./image/xiaomi-17-pro-max-trắng_1758819592.jpg.jpg" class="card-img-top" alt="Xiaomi">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Xiaomi 17 pro max</h5>
+                        <p class="card-text text-danger fw-bold">23.300.000₫</p>
+                        <a href="./product.html" class="btn btn-outline-primary">Xem thêm</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container text-center">
+            <p>© 2025 PhoneStore. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 
 </html>

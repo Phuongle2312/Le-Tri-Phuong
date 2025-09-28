@@ -1,12 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notifications</title>
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
+<header>
+    <div>
+        <nav class="navbar navbar-expand-sm bg-light m-2">
+            <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" class="navbar-toggler">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse m-2" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="./product.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./service.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
+                    <li class="nav-item">
+                        <div class="ms-2 me-auto position-relative">
+                            <a class="nav-link" href="./notification.html">Notifications</a>
+                            <span class="badge bg-danger rounded-bottom-circle position-absolute top-0 end-0">5</span>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
 <body>
-    
+    <header class="contact-header">
+        <h1>Thông báo mới</h1>
+        <p>Cập nhật khuyến mãi và tin tức từ PhoneStore</p>
+    </header>
+
+    <!-- NOTIFICATIONS SECTION -->
+    <div class="container my-5">
+        <div class="row">
+            <!-- SIDEBAR -->
+            <aside class="col-md-3 mb-4">
+                <div class="list-group shadow-sm">
+                    <a href="#" class="list-group-item list-group-item-action active">
+                        <i class="bi bi-gift me-2"></i> Khuyến mãi
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class="bi bi-newspaper me-2"></i> Tin tức
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class="bi bi-gear me-2"></i> Hệ thống
+                    </a>
+                </div>
+            </aside>
+
+            <!-- NOTIFICATIONS LIST -->
+            <main class="col-md-9">
+                <div class="list-group">
+                    <a href="#"
+                        class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                        <span><i class="bi bi-gift-fill text-danger me-2"></i> 🎉 Khuyến mãi 20% cho iPhone 17 Pro
+                            Max</span>
+                        <span class="badge bg-danger">Mới</span>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class="bi bi-truck text-primary me-2"></i> 🚚 Miễn phí giao hàng toàn quốc cho đơn hàng từ 5
+                        triệu
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class="bi bi-phone-vibrate text-success me-2"></i> 📱 Samsung Galaxy S25 Ultra mở bán - Quà
+                        tặng trị giá 3 triệu
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class="bi bi-tools text-warning me-2"></i> 🛠️ Miễn phí vệ sinh máy cho khách hàng thân thiết
+                        tháng 10
+                    </a>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container text-center">
+            <p>© 2025 PhoneStore. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
+
 </html>

@@ -1,0 +1,75 @@
+/* === RESET & BASE === */
+body {
+  background-color: #f8f9fa;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* === NAVBAR === */
+.navbar-brand {
+  font-weight: bold;
+  font-size: 22px;
+  color: #007bff !important;
+}
+.nav-link.active {
+  font-weight: bold;
+  color: #007bff !important;
+}
+
+/* === HERO (Trang chủ) === */
+.hero {
+  background: url("./image/photo-1511707171634-5f897ff02aa9.jpg") center/cover
+    no-repeat;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 50px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* === CONTACT PAGE === */
+.contact-header {
+  background: linear-gradient(90deg, #007bff, #00bcd4);
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+}
+.contact-info i {
+  font-size: 22px;
+  color: #007bff;
+  margin-right: 10px;
+}
+.contact-form {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* === PRODUCTS PAGE === */
+.product-card {
+  transition: 0.3s;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* === FOOTER === */
+footer {
+  background: #343a40;
+  color: #ddd;
+  padding: 40px 0 20px;
+  margin-top: 50px;
+}
+footer a {
+  color: #ddd;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #00bcd4;
+}
