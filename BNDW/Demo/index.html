@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo JS</title>
+    <script src="script.js"></script>
+</head>
+
+
+<body>
+    <div id="app">Demo JS
+        <h1>Demo Javascript</h1>
+        <button onclick="sayHello('FPT Aptech')">Click Me</button>
+        <button onclick="sum(5, 10)">Sum two numbers</button>
+        <button onclick="multiply(5, 10)">Multiply two numbers</button>
+        <button onclick="loop_for(10)">Loop Example</button>
+
+        <button onclick="changeBackgroundColor()">Change Background Color</button>
+    </div>
+    <br>
+    <div>
+        <h2>Login</h2>
+        <form action="post">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter username">
+            <br><br>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter password">
+            <label id="warningText" style="color: red;"></label>
+            <br><br>
+            <button id="loginBtn" type="button" onclick="Login()">Login</button>
+            <button type="button">Cancel</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+</body>
+
+</html>
