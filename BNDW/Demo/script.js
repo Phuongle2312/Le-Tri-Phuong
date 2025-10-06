@@ -18,12 +18,14 @@ function loop_for(n) {
     console.log(i);
   }
 }
-function changeBackgroundColor(color) {
+function changeBackgroundColor() {
   random = Math.random();
   console.log(random);
-  document.body.style.backgroundColor = `#$Math.floor(random*16777215).toString(16)`;
+  document.body.style.backgroundColor = `#${Math.floor(
+    random * 16777215
+  ).toString(16)}`;
 }
-function validateInput(param) {
+function validateInput(params) {
   username = document.getElementById("username").value;
   password = document.getElementById("password").value;
   //Username is required
