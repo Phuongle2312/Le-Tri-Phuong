@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Alert</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container mt-3">
+        <div class="alert alert-primary" role="alert">
+            This is a primary alert—check it out!
+        </div>
+        <div class="alert alert-danger" role="alert">
+            This is a danger alert—check it out!
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%"
+                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">5%</div>
+        </div>
+    </div>
+</body>
+<script>
+    let progressBar = document.querySelector('.progress-bar');
+    let width = 25;
+    setInterval(() => {
+        if (width >= 100) {
+            width = 0;
+        } else {
+            width += 5;
+            progressBar.style.width = width + '%';
+            progressBar.setAttribute('aria-valuenow', width);
+            progressBar.innerText = width + '%';
+        }
+    }, 1000);
+</script>
+
+</html>
