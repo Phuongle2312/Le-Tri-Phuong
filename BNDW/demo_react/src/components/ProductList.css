@@ -1,0 +1,44 @@
+/* Bố cục danh sách */
+.product-card {
+  height: 100%;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Cố định tỷ lệ ảnh (để các thẻ sản phẩm đều nhau) */
+.product-card img {
+  width: 100%;
+  height: 260px; /* hoặc 240px tùy ý */
+  object-fit: contain; /* Giữ đúng tỷ lệ, không méo */
+  background-color: #f8f9fa; /* nền nhẹ để ảnh nổi bật */
+  padding: 10px;
+  border-radius: 12px;
+}
+
+/* Căn chỉnh tên sản phẩm */
+.product-card h5 {
+  min-height: 48px; /* giúp các tên dài/nhỏ không lệch hàng */
+  font-size: 1.05rem;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+/* Giá */
+.product-card p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* Nút xem chi tiết */
+.product-card a.btn {
+  border-radius: 8px;
+  font-weight: 500;
+  padding: 6px 14px;
+}
