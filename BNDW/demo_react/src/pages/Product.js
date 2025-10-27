@@ -10,7 +10,9 @@ const Product = () => {
 
   if (!product) {
     return (
-      <h2 className="text-center text-danger mt-5">Không tìm thấy sản phẩm!</h2>
+      <h2 className="text-center text-danger mt-5">
+        ❌ Không tìm thấy sản phẩm!
+      </h2>
     );
   }
 
