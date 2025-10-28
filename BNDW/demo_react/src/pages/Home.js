@@ -27,21 +27,21 @@ const Home = () => {
         </h2>
         <Row className="text-center">
           <Col md={4} className="mb-4">
-            <i className="bi bi-star-fill text-warning display-4 mb-3"></i>
+            <i className="bi bi-truck text-warning display-4 mb-3"></i>
             <h5 className="fw-bold">Giao hàng miễn phí</h5>
             <p className="text-muted">
               Miễn phí giao hàng cho đơn hàng trên 500k.
             </p>
           </Col>
           <Col md={4} className="mb-4">
-            <i className="bi bi-shield-lock-fill text-warning display-4 mb-3"></i>
+            <i className="bi bi-cash-stack text-warning display-4 mb-3"></i>
             <h5 className="fw-bold">Thanh toán dễ dàng</h5>
             <p className="text-muted">
               Nhiều phương thức thanh toán an toàn và tiện lợi.
             </p>
           </Col>
           <Col md={4} className="mb-4">
-            <i className="bi bi-shield-lock-fill text-warning display-4 mb-3"></i>
+            <i className="bi bi-apple text-warning display-4 mb-3"></i>
             <h5 className="fw-bold">Sản phẩm đa dạng</h5>
             <p className="text-muted">
               Hàng trăm sản phẩm chất lượng cho bạn lựa chọn.
