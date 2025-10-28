@@ -16,10 +16,17 @@ const ProductList = () => {
         🛍️ Danh sách sản phẩm
       </h1>
       {/* Thanh tìm kiếm */}
-      <div className="search-bar mb-4 text-center">
+      <div id="main">
+        <label for="search-input" className="visually-hidden">
+          Search
+        </label>
         <input
+          id="search-input"
           type="text"
-          className="form-control search-input mx-auto"
+          name="text"
+          className="input"
+          aria-label="Search"
+          autoComplete="off"
           placeholder="🔍 Tìm kiếm sản phẩm..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
