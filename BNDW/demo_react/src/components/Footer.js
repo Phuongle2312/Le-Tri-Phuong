@@ -8,10 +8,10 @@ const Footer = () => {
         <p className="mb-0">
           📞 Hotline:{" "}
           <a
-            href="tel:+84987654321"
+            href="tel:+84986651866"
             className="text-success text-decoration-none"
           >
-            0987 654 321
+            0986 651 866
           </a>{" "}
           | ✉️{" "}
           <a
