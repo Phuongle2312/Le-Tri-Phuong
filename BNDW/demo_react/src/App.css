@@ -75,3 +75,11 @@ body {
   padding: 1rem 0;
   text-align: center;
 }
+a.fs-4:hover {
+  transform: scale(1.2);
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+button.btn-success:hover {
+  background-color: #157347 !important;
+}
