@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Row, Col, Card } from "react-bootstrap";
 import productData from "../data/Productdata.json";
+import "./Home.css";
 const Home = () => {
   const featuredProducts = productData.slice(0, 3); // Lấy 3 sản phẩm đầu tiên làm sản phẩm nổi bật
   return (
@@ -49,6 +50,7 @@ const Home = () => {
           </Col>
         </Row>
       </section>
+
       {/* 3. FEATURED PRODUCTS (Sản phẩm nổi bật) */}
       <section className="bg-white py-5 border-top">
         <div className="container">
