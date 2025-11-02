@@ -25,5 +25,19 @@
     "image": "/image/oppo  Find X7 Ultra.jpg",
     "price": "19.990.000₫",
     "description": "Oppo Find X7 Pro màn hình AMOLED 6,7 inch, bộ vi xử lý là Qualcomm Snapdragon 8 Gen2 ."
+  },
+  {
+    "id": 5,
+    "name": "Vivo X300 Pro",
+    "image": "/image/vivoX300 Pro.jpg",
+    "price": "34.990.000₫",
+    "description": "Vivo X300 Pro camera tiềm vọng khủng 200 MP, chip Dimensity 9500 và màn hình 4.500 nits"
+  },
+  {
+    "id": 6,
+    "name": "Realme GT 8 Pro",
+    "image": "/image/realme-gt8-pro-xanh-ngọc_1761059633.jpg.jpg",
+    "price": "14.990.000₫",
+    "description": "Realme GT 5 Pro với chip Snapdragon 8 Gen 5, màn hình AMOLED 6.7 inch, camera chính 50MP."
   }
 ]
