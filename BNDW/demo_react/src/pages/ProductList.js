@@ -1,15 +1,25 @@
 import "./Product.css";
 import "bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import products from "../data/Productdata.json";
 
 const ProductList = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();
+
   // Lọc sản phẩm dựa trên từ khóa tìm kiếm
   const filteredProducts = products.filter((product) =>
     product.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
+  const handAddToCart = (product) => {
+    navigate("/product-card", { state: { product } });
+  };
+
+  const handleBuyNow = (product) => {
+    navigate("/checkout", { state: { product } });
+  };
   return (
     <div className="container my-5">
       <h1 className="text-center fw-bold text-success mb-4">
@@ -57,6 +67,18 @@ const ProductList = () => {
                   >
                     🔍 Xem chi tiết
                   </Link>
+                  <button
+                    onClick={() => handAddToCart(product)}
+                    className="btn btn-success w-100 mt-2"
+                  >
+                    🛒 Thêm vào giỏ hàng
+                  </button>
+                  <button
+                    onClick={() => handleBuyNow(product)}
+                    className="btn btn-danger w-100 mt-2"
+                  >
+                    💳 Mua ngay
+                  </button>
                 </div>
               </div>
             </div>

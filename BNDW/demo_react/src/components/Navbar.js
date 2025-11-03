@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
+import "./Navbar.css";
 
 const NavigationBar = () => {
   return (
@@ -30,7 +31,7 @@ const NavigationBar = () => {
               as={Link}
               to="/product-card"
               variant="outline-success"
-              className="rounded-pill"
+              className="rounded-pill custom-btn"
             >
               🛍️ Xem giỏ hàng
             </Button>
@@ -38,7 +39,7 @@ const NavigationBar = () => {
               as={Link}
               to="/checkout"
               variant="success"
-              className="rounded-pill"
+              className="rounded-pill custom-btn"
             >
               💳 Mua ngay
             </Button>

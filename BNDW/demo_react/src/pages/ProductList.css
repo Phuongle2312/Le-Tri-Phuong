@@ -21,6 +21,7 @@
   border-radius: 20px;
   overflow: hidden;
   background-color: #fff;
+  justify-content: between;
 }
 
 .product-card:hover {
@@ -31,8 +32,6 @@
 /* --- ẢNH SẢN PHẨM --- */
 .product-image-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
   height: 250px;
   overflow: hidden;
 }
