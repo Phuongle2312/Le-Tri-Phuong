@@ -1,49 +1,52 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import { Navbar, Nav, Container, Button } from "react-bootstrap";
 
-const Navbar = () => {
+const NavigationBar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-success shadow-sm">
-      <div className="container">
-        <Link className="navbar-brand fw-bold fs-4" to="/">
+    <Navbar bg="light" expand="lg" className="shadow-sm py-3">
+      <Container>
+        <Navbar.Brand as={Link} to="/" className="fw-bold text-success">
           🌿 MyShop
-        </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/">
-                Trang chủ
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/products">
-                Sản phẩm
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/services">
-                Dịch vụ
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/contact">
-                Liên hệ
-              </NavLink>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto">
+            <Nav.Link as={NavLink} to="/" end>
+              Trang chủ
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="/products">
+              Sản phẩm
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="/services">
+              Dịch vụ
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="/contact">
+              Liên hệ
+            </Nav.Link>
+          </Nav>
+          <div className="ms-3 d-flex gap-2">
+            <Button
+              as={Link}
+              to="/product-card"
+              variant="outline-success"
+              className="rounded-pill"
+            >
+              🛍️ Xem giỏ hàng
+            </Button>
+            <Button
+              as={Link}
+              to="/checkout"
+              variant="success"
+              className="rounded-pill"
+            >
+              💳 Mua ngay
+            </Button>
+          </div>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 
-export default Navbar;
+export default NavigationBar;

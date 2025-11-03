@@ -6,7 +6,9 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
-import Contact from "./pages/Contact.js";
+import Contact from "./pages/Contact";
+import ProductCard from "./pages/ProductCard";
+import Checkout from "./pages/Checkout";
 
 const App = () => {
   return (
@@ -20,6 +22,8 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/products" element={<ProductList />} />
             <Route path="/product/:id" element={<Product />} />
+            <Route path="/product-card" element={<ProductCard />} />
+            <Route path="/checkout" element={<Checkout />} />
           </Routes>
         </main>
         <Footer />
