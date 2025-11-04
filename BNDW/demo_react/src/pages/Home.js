@@ -3,86 +3,93 @@ import { Link } from "react-router-dom";
 import { Row, Col, Card } from "react-bootstrap";
 import productData from "../data/Productdata.json";
 import "./Home.css";
+
 const Home = () => {
-  const featuredProducts = productData.slice(0, 3); // Lấy 3 sản phẩm đầu tiên làm sản phẩm nổi bật
+  const featuredProducts = productData.slice(0, 3);
+
   return (
     <>
-      {/*---phần chào mừng---*/}
-      <section className="text-center py-5 bg-light">
+      {/* HERO SECTION */}
+      <section className="hero-section text-center text-white d-flex align-items-center justify-content-center">
         <div className="container">
-          <h1 className="display-4 fw-bold text-success mb-3">
-            🌿 Chào mừng đến MyShop!
+          <h1 className="display-5 fw-bold mb-3 animate__animated animate__fadeInDown">
+            Chào mừng đến <span className="text-warning">MyShop</span>!
           </h1>
-          <p className="lead mb-4 text-secondary">
-            Chúng tôi cung cấp những sản phẩm chất lượng và dịch vụ tận tâm.
+          <p className="lead mb-4 animate__animated animate__fadeInUp">
+            Cung cấp sản phẩm chất lượng, dịch vụ tận tâm và giá tốt nhất!
           </p>
-          <Link to="/products" className="btn btn-success btn-lg shadow">
-            🛒 Xem sản phẩm
+          <Link to="/products" className="btn btn-light btn-lg shadow fw-bold">
+            🛍️ Mua ngay
           </Link>
         </div>
       </section>
-      {/*---(tại sao chọn chúng tôi)---*/}
-      <section className="container py-5">
-        <h2 className="text-center mb-5 fw-bold text-dark">
-          ⭐ Tại sao chọn MyShop?
-        </h2>
-        <Row className="text-center">
-          <Col md={4} className="mb-4">
-            <i className="bi bi-truck text-warning display-4 mb-3"></i>
-            <h5 className="fw-bold">Giao hàng miễn phí</h5>
-            <p className="text-muted">
-              Miễn phí giao hàng cho đơn hàng trên 500k.
-            </p>
-          </Col>
-          <Col md={4} className="mb-4">
-            <i className="bi bi-cash-stack text-warning display-4 mb-3"></i>
-            <h5 className="fw-bold">Thanh toán dễ dàng</h5>
-            <p className="text-muted">
-              Nhiều phương thức thanh toán an toàn và tiện lợi.
-            </p>
-          </Col>
-          <Col md={4} className="mb-4">
-            <i className="bi bi-apple text-warning display-4 mb-3"></i>
-            <h5 className="fw-bold">Sản phẩm đa dạng</h5>
-            <p className="text-muted">
-              Hàng trăm sản phẩm chất lượng cho bạn lựa chọn.
-            </p>
-          </Col>
-        </Row>
+
+      {/* WHY CHOOSE US */}
+      <section className="why-section py-5 bg-light">
+        <div className="container">
+          <h2 className="text-center mb-5 fw-bold text-success">
+            🌟 Tại sao chọn MyShop?
+          </h2>
+          <Row className="text-center">
+            <Col md={4} className="mb-4">
+              <div className="p-4 bg-white shadow-sm rounded-4 h-100 hover-card">
+                <i className="bi bi-truck display-4 text-success mb-3"></i>
+                <h5 className="fw-bold">Giao hàng miễn phí</h5>
+                <p className="text-muted">
+                  Miễn phí giao hàng cho đơn hàng từ 500K trở lên.
+                </p>
+              </div>
+            </Col>
+            <Col md={4} className="mb-4">
+              <div className="p-4 bg-white shadow-sm rounded-4 h-100 hover-card">
+                <i className="bi bi-credit-card display-4 text-success mb-3"></i>
+                <h5 className="fw-bold">Thanh toán dễ dàng</h5>
+                <p className="text-muted">
+                  Hỗ trợ nhiều hình thức thanh toán an toàn, tiện lợi.
+                </p>
+              </div>
+            </Col>
+            <Col md={4} className="mb-4">
+              <div className="p-4 bg-white shadow-sm rounded-4 h-100 hover-card">
+                <i className="bi bi-phone display-4 text-success mb-3"></i>
+                <h5 className="fw-bold">Sản phẩm đa dạng</h5>
+                <p className="text-muted">
+                  Hàng trăm mẫu điện thoại chính hãng cho bạn lựa chọn.
+                </p>
+              </div>
+            </Col>
+          </Row>
+        </div>
       </section>
 
-      {/* 3. FEATURED PRODUCTS (Sản phẩm nổi bật) */}
-      <section className="bg-white py-5 border-top">
+      {/* FEATURED PRODUCTS */}
+      <section className="py-5 bg-white">
         <div className="container">
-          <h2 className="text-center mb-5 fw-bold text-dark">
-            Sản phẩm nổi bật
+          <h2 className="text-center fw-bold text-success mb-4">
+            🔥 Sản phẩm nổi bật
           </h2>
           <Row>
-            {/* Đây là các placeholder (giả lập) cho card sản phẩm */}
             {featuredProducts.map((product) => (
               <Col md={4} key={product.id} className="mb-4">
-                <Card className="shadow-sm h-100 border-0">
-                  <div className="text-center p-3">
+                <Card className="product-card shadow-sm border-0 h-100 rounded-4">
+                  <div className="text-center p-3 bg-light rounded-top-4">
                     <img
                       src={process.env.PUBLIC_URL + product.image}
                       alt={product.name}
-                      className="img-fluid rounded-3"
-                      style={{
-                        height: "200px",
-                        objectFit: "contain",
-                      }}
+                      className="img-fluid"
+                      style={{ height: "230px", objectFit: "contain" }}
                     />
                   </div>
                   <Card.Body className="text-center">
-                    <Card.Title className="fw-bold text-success">
+                    <Card.Title className="fw-bold text-dark">
                       {product.name}
                     </Card.Title>
-                    <Card.Text className="text-danger fw-bold">
+                    <Card.Text className="text-danger fw-bold fs-5">
                       {product.price}
                     </Card.Text>
                     <Link
                       to={`/product/${product.id}`}
-                      className="btn btn-outline-success btn-sm"
+                      className="btn btn-success px-4"
                     >
                       Xem chi tiết
                     </Link>
@@ -92,9 +99,36 @@ const Home = () => {
             ))}
           </Row>
           <div className="text-center mt-4">
-            <Link to="/products" className="btn btn-outline-dark">
-              Xem thêm sản phẩm
+            <Link to="/products" className="btn btn-outline-success">
+              Xem thêm sản phẩm →
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* PROMOTION BANNER */}
+      <section className="promo-section py-5 text-center text-white">
+        <div className="container">
+          <h2 className="fw-bold mb-3">🎉 Ưu đãi đặc biệt trong tháng!</h2>
+          <p className="lead mb-4">
+            Giảm ngay <strong>20%</strong> cho các dòng iPhone 17 Series mới
+            nhất.
+          </p>
+          <Link to="/products" className="btn btn-light fw-bold px-4">
+            Mua ngay
+          </Link>
+        </div>
+      </section>
+
+      {/* BRAND LOGOS */}
+      <section className="py-5 bg-light text-center">
+        <div className="container">
+          <h4 className="fw-bold text-success mb-4">Thương hiệu nổi bật</h4>
+          <div className="d-flex justify-content-center align-items-center flex-wrap gap-4">
+            <img src="/image/apple.jpg" height="50" alt="Apple" />
+            <img src="/image/samsung.jpg" height="50" alt="Samsung" />
+            <img src="/image/xiaomi.jpg" height="50" alt="Xiaomi" />
+            <img src="/image/oppo.jpg" height="50" alt="Oppo" />
           </div>
         </div>
       </section>
