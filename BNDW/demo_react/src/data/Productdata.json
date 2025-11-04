@@ -9,13 +9,14 @@
   {
     "id": 2,
     "name": "Samsung Galaxy S25 Ultra",
-    "image": "/image/SS S25 Ultra.jpg",
-    "price": "27.280.000₫"
+    "image": "/image/samsung-galaxy-s25-ultra-blue-thumbai-600x600.jpg",
+    "price": "27.280.000₫",
+    "description": "Samsung Galaxy S25 Ultra với camera 200MP, chip Exynos 2400, màn hình 6.8 inch QHD+ AMOLED."
   },
   {
     "id": 3,
     "name": "Xiaomi 17 Pro Max",
-    "image": "/image/xiaomi-17-pro-3.webp",
+    "image": "/image/xiaomi-17-pro-3.PNG",
     "price": "26.990.000₫",
     "description": "Xiaomi 17 Pro Max trang bị Leica Summilux 50 MP, chip Snapdragon 8 Elite Gen 5 và màn hình LTPO AMOLED 6.9 inch."
   },

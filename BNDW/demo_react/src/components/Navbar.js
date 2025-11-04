@@ -35,14 +35,6 @@ const NavigationBar = () => {
             >
               🛍️ Xem giỏ hàng
             </Button>
-            <Button
-              as={Link}
-              to="/checkout"
-              variant="success"
-              className="rounded-pill custom-btn"
-            >
-              💳 Mua ngay
-            </Button>
           </div>
         </Navbar.Collapse>
       </Container>
