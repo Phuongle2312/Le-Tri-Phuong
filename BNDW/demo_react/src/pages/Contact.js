@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   FaFacebook,
   FaInstagram,
@@ -8,10 +8,14 @@ import {
 } from "react-icons/fa";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
 
 const Contact = () => {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  // 🧩 Khởi tạo form, lấy dữ liệu cũ nếu có
+  const [form, setForm] = useState(() => {
+    const saved = localStorage.getItem("contactForm");
+    return saved ? JSON.parse(saved) : { name: "", email: "", message: "" };
+  });
+
   useEffect(() => {
     Aos.init({
       duration: 1000,
@@ -19,13 +23,35 @@ const Contact = () => {
       once: true,
     });
   }, []);
+
+  // 💾 Lưu form vào localStorage mỗi khi thay đổi
+  useEffect(() => {
+    localStorage.setItem("contactForm", JSON.stringify(form));
+  }, [form]);
+
   const handleChange = (e) =>
     setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // ✅ Lưu lại lịch sử các tin nhắn đã gửi
+    const oldMessages =
+      JSON.parse(localStorage.getItem("contactMessages")) || [];
+    const newMessage = {
+      ...form,
+      date: new Date().toLocaleString(),
+    };
+    localStorage.setItem(
+      "contactMessages",
+      JSON.stringify([...oldMessages, newMessage])
+    );
+
     alert("✅ Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi sớm nhất.");
+
+    // 🧹 Xóa form sau khi gửi
     setForm({ name: "", email: "", message: "" });
+    localStorage.removeItem("contactForm");
   };
 
   return (
@@ -34,7 +60,6 @@ const Contact = () => {
         📞 Liên hệ với MyShop
       </h1>
 
-      {/* --- Bố cục chia 2 cột --- */}
       <div className="row g-4">
         {/* --- Form liên hệ --- */}
         <div className="col-lg-6" data-aos="fade-right">
@@ -132,9 +157,9 @@ const Contact = () => {
               width="600"
               height="450"
               style={{ border: 0 }}
-              allowfullscreen=""
+              allowFullScreen=""
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
+              referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
         </div>

@@ -1,14 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import products from "../data/Productdata.json";
 import { Card, Button, Row, Col } from "react-bootstrap";
 
 const ProductCard = () => {
-  const [cart, setCart] = useState([]);
   const navigate = useNavigate();
 
+  // 🧩 Lấy giỏ hàng từ localStorage khi khởi tạo
+  const [cart, setCart] = useState(() => {
+    const savedCart = localStorage.getItem("cart");
+    return savedCart ? JSON.parse(savedCart) : [];
+  });
+
+  // 💾 Cập nhật localStorage mỗi khi giỏ hàng thay đổi
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
+
   const addToCart = (product) => {
-    setCart([...cart, product]);
+    // Nếu sản phẩm đã có, chỉ tăng số lượng
+    const existing = cart.find((item) => item.id === product.id);
+    if (existing) {
+      const updatedCart = cart.map((item) =>
+        item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+      );
+      setCart(updatedCart);
+    } else {
+      setCart([...cart, { ...product, quantity: 1 }]);
+    }
     alert(`${product.name} đã được thêm vào giỏ hàng!`);
   };
 
@@ -20,11 +39,17 @@ const ProductCard = () => {
     navigate("/checkout", { state: { cart } });
   };
 
+  const removeFromCart = (id) => {
+    const updated = cart.filter((item) => item.id !== id);
+    setCart(updated);
+  };
+
   return (
     <div className="container my-5">
       <h1 className="text-center text-success fw-bold mb-4">
         🛒 Danh sách sản phẩm
       </h1>
+
       <Row className="g-4">
         {products.map((product) => (
           <Col md={4} key={product.id}>
@@ -64,13 +89,26 @@ const ProductCard = () => {
         {cart.length > 0 ? (
           <>
             <ul className="list-group mb-3">
-              {cart.map((item, index) => (
+              {cart.map((item) => (
                 <li
-                  key={index}
+                  key={item.id}
                   className="list-group-item d-flex justify-content-between align-items-center"
                 >
-                  {item.name}
-                  <span className="text-danger fw-bold">{item.price}</span>
+                  <div>
+                    {item.name}{" "}
+                    <span className="text-muted">x{item.quantity}</span>
+                  </div>
+                  <div>
+                    <span className="text-danger fw-bold">{item.price}</span>{" "}
+                    <Button
+                      variant="outline-danger"
+                      size="sm"
+                      className="ms-2"
+                      onClick={() => removeFromCart(item.id)}
+                    >
+                      X
+                    </Button>
+                  </div>
                 </li>
               ))}
             </ul>
