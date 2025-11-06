@@ -14,25 +14,25 @@ const ProductList = () => {
   const [darkMode, setDarkMode] = useState(false);
   const navigate = useNavigate();
 
-  // Khởi tạo AOS (hiệu ứng cuộn)
+  // Khởi tạo hiệu ứng AOS
   useEffect(() => {
     Aos.init({ duration: 700, easing: "ease-in-out" });
   }, []);
 
-  // Lọc sản phẩm
+  // Lọc sản phẩm theo từ khóa
   const filteredProducts = products.filter((product) =>
     product.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // Xử lý thêm vào giỏ
-  const handAddToCart = (product) => {
+  // Thêm vào giỏ hàng
+  const handleAddToCart = (product) => {
     toast.success(`🛒 Đã thêm "${product.name}" vào giỏ hàng!`, {
       position: "bottom-right",
       autoClose: 1500,
     });
   };
 
-  // Xử lý mua ngay
+  // Mua ngay
   const handleBuyNow = (product) => {
     navigate("/checkout", { state: { product } });
   };
@@ -75,7 +75,7 @@ const ProductList = () => {
           />
         </motion.div>
 
-        {/* Grid sản phẩm */}
+        {/* Danh sách sản phẩm */}
         <div className="row g-4 justify-content-center">
           {filteredProducts.length > 0 ? (
             filteredProducts.map((product) => (
@@ -86,6 +86,7 @@ const ProductList = () => {
                 whileHover={{ scale: 1.02 }}
               >
                 <div className="card product-card border-0 shadow-sm h-100 text-center">
+                  {/* Ảnh sản phẩm */}
                   <div className="product-image-container position-relative overflow-hidden">
                     <img
                       src={product.image}
@@ -101,23 +102,38 @@ const ProductList = () => {
                       </button>
                     </div>
                   </div>
-                  <div className="card-body">
-                    <h5 className="fw-bold text-dark">{product.name}</h5>
-                    <p className="text-danger fw-semibold mb-3">
-                      {product.price}
-                    </p>
-                    <Link
-                      to={`/product/${product.id}`}
-                      className="btn btn-outline-success w-100 mb-2"
-                    >
-                      🔍 Xem chi tiết
-                    </Link>
-                    <button
-                      onClick={() => handAddToCart(product)}
-                      className="btn btn-success w-100"
-                    >
-                      🛒 Thêm vào giỏ
-                    </button>
+
+                  {/* Nội dung sản phẩm */}
+                  <div className="card-body d-flex flex-column justify-content-between">
+                    <div>
+                      <h5
+                        className="fw-bold text-dark product-name"
+                        style={{
+                          minHeight: "48px",
+                          lineHeight: "1.3",
+                        }}
+                      >
+                        {product.name}
+                      </h5>
+                      <p className="text-danger fw-semibold mb-3">
+                        {product.price}
+                      </p>
+                    </div>
+
+                    <div className="mt-auto">
+                      <Link
+                        to={`/product/${product.id}`}
+                        className="btn btn-outline-success w-100 mb-2"
+                      >
+                        🔍 Xem chi tiết
+                      </Link>
+                      <button
+                        onClick={() => handleAddToCart(product)}
+                        className="btn btn-success w-100"
+                      >
+                        🛒 Thêm vào giỏ
+                      </button>
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -129,6 +145,7 @@ const ProductList = () => {
           )}
         </div>
       </div>
+
       <ToastContainer />
     </div>
   );
