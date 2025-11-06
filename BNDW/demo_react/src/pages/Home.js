@@ -72,13 +72,20 @@ const Home = () => {
             {featuredProducts.map((product) => (
               <Col md={4} key={product.id} className="mb-4">
                 <Card className="product-card shadow-sm border-0 h-100 rounded-4">
-                  <div className="text-center p-3 bg-light rounded-top-4">
+                  <div className="product-image-container bg-light">
                     <img
                       src={process.env.PUBLIC_URL + product.image}
                       alt={product.name}
-                      className="img-fluid"
-                      style={{ height: "230px", objectFit: "contain" }}
+                      className="product-image"
                     />
+                    <div className="overlay">
+                      <Link
+                        to={`/product/${product.id}`}
+                        className="btn btn-success fw-bold"
+                      >
+                        Xem chi tiết
+                      </Link>
+                    </div>
                   </div>
                   <Card.Body className="text-center">
                     <Card.Title className="fw-bold text-dark">
@@ -87,19 +94,13 @@ const Home = () => {
                     <Card.Text className="text-danger fw-bold fs-5">
                       {product.price}
                     </Card.Text>
-                    <Link
-                      to={`/product/${product.id}`}
-                      className="btn btn-success px-4"
-                    >
-                      Xem chi tiết
-                    </Link>
                   </Card.Body>
                 </Card>
               </Col>
             ))}
           </Row>
           <div className="text-center mt-4">
-            <Link to="/products" className="btn btn-outline-success">
+            <Link to="/products" className="btn btn-outline-success px-4">
               Xem thêm sản phẩm →
             </Link>
           </div>
