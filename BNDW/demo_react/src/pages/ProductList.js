@@ -8,11 +8,13 @@ import "aos/dist/aos.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { motion } from "framer-motion";
-
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 const ProductList = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [darkMode, setDarkMode] = useState(false);
   const navigate = useNavigate();
+  const { addToCart } = useContext(CartContext);
 
   // Khởi tạo hiệu ứng AOS
   useEffect(() => {
@@ -30,6 +32,8 @@ const ProductList = () => {
       position: "bottom-right",
       autoClose: 1500,
     });
+    // thực sự thêm sản phẩm vào context cart
+    addToCart(product);
   };
 
   // Mua ngay

@@ -1,11 +1,14 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Form, Button, Card } from "react-bootstrap";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
 const Checkout = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const cart = location.state?.cart || [];
+  const { clearCart } = useContext(CartContext);
 
   const total = cart.reduce((sum, item) => {
     const price = parseInt(item.price.replace(/\D/g, ""));
@@ -15,6 +18,9 @@ const Checkout = () => {
   const handlePayment = (e) => {
     e.preventDefault();
     alert("Thanh toán thành công! Cảm ơn bạn đã mua hàng.");
+    if (typeof clearCart === "function") {
+      clearCart();
+    }
     navigate("/");
   };
 
